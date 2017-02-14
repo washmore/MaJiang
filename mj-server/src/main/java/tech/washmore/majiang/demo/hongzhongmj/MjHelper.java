@@ -40,7 +40,7 @@ public class MjHelper {
                 return allMajiang.remove(i);
             }
         }
-        return 发牌();
+        throw new IllegalArgumentException("没有这种牌了");
     }
 
     public static void 顺牌(List<Majiang> majiang) {
