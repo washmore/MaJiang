@@ -1,4 +1,4 @@
-package tech.washmore.majiang.demo.changshamj.model;
+package tech.washmore.majiang.demo.hongzhongmj.model;
 
 /**
  * Created by Washmore on 2017/2/14.

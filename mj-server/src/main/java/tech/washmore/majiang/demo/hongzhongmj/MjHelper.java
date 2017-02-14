@@ -1,7 +1,7 @@
-package tech.washmore.majiang.demo.changshamj;
+package tech.washmore.majiang.demo.hongzhongmj;
 
-import tech.washmore.majiang.demo.changshamj.model.Majiang;
-import tech.washmore.majiang.demo.changshamj.model.PAIXING;
+import tech.washmore.majiang.demo.hongzhongmj.model.Majiang;
+import tech.washmore.majiang.demo.hongzhongmj.model.PAIXING;
 
 import java.util.*;
 import java.util.stream.Collectors;

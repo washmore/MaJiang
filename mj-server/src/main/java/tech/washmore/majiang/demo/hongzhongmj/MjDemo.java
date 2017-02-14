@@ -1,6 +1,6 @@
-package tech.washmore.majiang.demo.changshamj;
+package tech.washmore.majiang.demo.hongzhongmj;
 
-import tech.washmore.majiang.demo.changshamj.model.Majiang;
+import tech.washmore.majiang.demo.hongzhongmj.model.Majiang;
 
 import java.util.ArrayList;
 import java.util.List;
