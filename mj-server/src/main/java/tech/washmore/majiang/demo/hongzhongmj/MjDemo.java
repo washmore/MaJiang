@@ -42,15 +42,15 @@ public class MjDemo {
                 myMajiang.add(MjHelper.发牌());
             }
             MjHelper.验证胡牌(myMajiang);
-            System.out.print(++index + "\t手牌牌型:" + myMajiang.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
+            System.out.print(++index + "\t\t手牌牌型:" + myMajiang.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
             long t1 = System.currentTimeMillis();
             List<Majiang> result = MjHelper.验证胡牌(myMajiang);
             long t2 = System.currentTimeMillis();
             if (result != null) {
-                System.out.println("\t耗時:" + (t2 - t1) + "\t是否和牌:" + (result != null) + "\t胡牌牌型:" + result.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
+                System.out.println("\t\t耗時:" + (t2 - t1) + "\t\t是否和牌:" + (result != null) + "\t\t胡牌牌型:" + result.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
                 break;
             } else {
-                System.out.println("\t耗時:" + (t2 - t1) + "\t是否和牌:" + (result != null));
+                System.out.println("\t\t耗時:" + (t2 - t1) + "\t\t是否和牌:" + (result != null));
             }
         } while (true);
     }

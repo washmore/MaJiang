@@ -1,7 +1,7 @@
 package tech.washmore.majiang.demo.hongzhongmj;
 
 import tech.washmore.majiang.demo.hongzhongmj.model.Majiang;
-import tech.washmore.majiang.demo.hongzhongmj.model.PAIXING;
+import tech.washmore.majiang.demo.hongzhongmj.model.PAI_XING;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -21,10 +21,10 @@ public class MjHelper {
                 }
             }
         }
-        allMajiang.add(new Majiang(PAIXING.红中));
-        allMajiang.add(new Majiang(PAIXING.红中));
-        allMajiang.add(new Majiang(PAIXING.红中));
-        allMajiang.add(new Majiang(PAIXING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
     }
 
     public static Majiang 发牌() {
@@ -34,7 +34,7 @@ public class MjHelper {
         return allMajiang.remove(new Random().nextInt(allMajiang.size()));
     }
 
-    public static Majiang 发指定牌(PAIXING paixing) {
+    public static Majiang 发指定牌(PAI_XING paixing) {
         for (int i = 0; i < allMajiang.size(); i++) {
             if (allMajiang.get(i).getPai().equals(paixing)) {
                 return allMajiang.remove(i);
@@ -62,7 +62,7 @@ public class MjHelper {
         List<List<Majiang>> list = new ArrayList<>();
         for (int i = 0; i < majiangZiList.size(); i++) {
             Majiang z1 = majiangZiList.get(i);
-            if (z1.getPai().equals(PAIXING.红中)) {
+            if (z1.getPai().equals(PAI_XING.红中)) {
                 hongzhong.add(z1);
                 continue;
             } else {
@@ -107,8 +107,8 @@ public class MjHelper {
     private static List<List<Majiang>> 替换红中赖子(int hzNum, List<List<Majiang>> source) {
         List<List<Majiang>> target = new ArrayList<>();
         if (source == null || source.size() == 0) {
-            for (PAIXING pai : PAIXING.values()) {
-                if (pai.equals(PAIXING.红中)) {
+            for (PAI_XING pai : PAI_XING.values()) {
+                if (pai.equals(PAI_XING.红中)) {
                     continue;
                 }
                 List<Majiang> newM = new ArrayList<>();
@@ -117,8 +117,8 @@ public class MjHelper {
             }
         } else {
             for (List<Majiang> m : source) {
-                for (PAIXING pai : PAIXING.values()) {
-                    if (pai.equals(PAIXING.红中)) {
+                for (PAI_XING pai : PAI_XING.values()) {
+                    if (pai.equals(PAI_XING.红中)) {
                         continue;
                     }
                     List<Majiang> newM = new ArrayList<>();

@@ -7,22 +7,22 @@ public class Majiang {
     public Majiang(int se, int shu) {
         this.se = se;
         this.shu = shu;
-        this.pai = PAIXING.getPai(se, shu);
+        this.pai = PAI_XING.getPai(se, shu);
     }
 
-    public Majiang(PAIXING paixing) {
+    public Majiang(PAI_XING paixing) {
         this(paixing.getSe(), paixing.getShu());
     }
 
     private int se;
     private int shu;
-    private PAIXING pai;
+    private PAI_XING pai;
 
-    public PAIXING getPai() {
+    public PAI_XING getPai() {
         return pai;
     }
 
-    public void setPai(PAIXING pai) {
+    public void setPai(PAI_XING pai) {
         this.pai = pai;
     }
 

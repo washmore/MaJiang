@@ -3,7 +3,7 @@ package tech.washmore.majiang.demo.hongzhongmj.model;
 /**
  * Created by Washmore on 2017/2/13.
  */
-public enum PAIXING {
+public enum PAI_XING {
     红中(0, 0),
     一饼(1, 1),
     二饼(1, 2),
@@ -44,13 +44,13 @@ public enum PAIXING {
         return shu;
     }
 
-    PAIXING(int se, int shu) {
+    PAI_XING(int se, int shu) {
         this.se = se;
         this.shu = shu;
     }
 
-    public static PAIXING getPai(int se, int shu) {
-        for (PAIXING pai : PAIXING.values()) {
+    public static PAI_XING getPai(int se, int shu) {
+        for (PAI_XING pai : PAI_XING.values()) {
             if (pai.se == se && pai.shu == shu) {
                 return pai;
             }
