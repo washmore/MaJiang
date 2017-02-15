@@ -28,7 +28,7 @@ public class MjDemo {
 //        myMajiang.add(MjHelper.发指定牌(PAI_XING.九万));
 //        myMajiang.add(MjHelper.发指定牌(PAI_XING.九万));
 //
-//        myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+//        myMajiang.add(MjHelper.发指定牌(PAI_XING.三万));
 //
 //        MjHelper.顺牌(myMajiang);
 //        System.out.print("\t\t手牌牌型:" + myMajiang.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
@@ -45,7 +45,10 @@ public class MjDemo {
         do {
             List<Majiang> myMajiang = new ArrayList<>();
             MjHelper.开局();
-            for (int i = 0; i < 14; i++) {
+            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            for (int i = 0; i < 11; i++) {
                 myMajiang.add(MjHelper.发牌());
             }
             MjHelper.顺牌(myMajiang);
