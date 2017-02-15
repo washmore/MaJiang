@@ -21,10 +21,10 @@ public class MjHelper {
                 }
             }
         }
-        allMajiang.add(new Majiang(PAI_XING.红中));
-        allMajiang.add(new Majiang(PAI_XING.红中));
-        allMajiang.add(new Majiang(PAI_XING.红中));
-        allMajiang.add(new Majiang(PAI_XING.红中));
+       // allMajiang.add(new Majiang(PAI_XING.红中));
+       // allMajiang.add(new Majiang(PAI_XING.红中));
+       // allMajiang.add(new Majiang(PAI_XING.红中));
+       // allMajiang.add(new Majiang(PAI_XING.红中));
     }
 
     public static Majiang 发牌() {
@@ -87,7 +87,7 @@ public class MjHelper {
 //        if (hongzhong.size() == 4) {
 //           return majiangZiList;
 //        } else
-            if (hongzhong.size() > 0) {
+        if (hongzhong.size() > 0) {
             List<Majiang> other = majiangZiList.subList(hongzhong.size(), majiangZiList.size());
             List<List<Majiang>> newH = 替换红中赖子(hongzhong.size(), new ArrayList<>());
             for (List<Majiang> nm : newH) {
@@ -164,16 +164,10 @@ public class MjHelper {
         }
         List<Majiang> check = trimList.get(0);
         if (check.size() == 4) {
-            if (trimList.size() < 3) {
-                return false;
-            }
             if (!处理顺子(trimList)) {
                 return false;
             }
         } else if (check.size() == 1 || check.size() == 2) {
-            if (trimList.size() < 3) {
-                return false;
-            }
             if (!处理顺子(trimList)) {
                 return false;
             }
@@ -184,6 +178,9 @@ public class MjHelper {
     }
 
     public static boolean 处理顺子(List<List<Majiang>> trimList) {
+        if (trimList.size() < 3) {
+            return false;
+        }
         Majiang first = trimList.get(0).get(0);
         Majiang second = trimList.get(1).get(0);
         Majiang third = trimList.get(2).get(0);

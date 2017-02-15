@@ -45,10 +45,11 @@ public class MjDemo {
         do {
             List<Majiang> myMajiang = new ArrayList<>();
             MjHelper.开局();
-            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
-            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
-            myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
-            for (int i = 0; i < 11; i++) {
+            // myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            // myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            //myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            //myMajiang.add(MjHelper.发指定牌(PAI_XING.红中));
+            for (int i = 0; i < 14; i++) {
                 myMajiang.add(MjHelper.发牌());
             }
             MjHelper.顺牌(myMajiang);
