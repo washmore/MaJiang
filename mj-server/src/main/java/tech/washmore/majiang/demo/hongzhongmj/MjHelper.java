@@ -21,10 +21,10 @@ public class MjHelper {
                 }
             }
         }
-       // allMajiang.add(new Majiang(PAI_XING.红中));
-       // allMajiang.add(new Majiang(PAI_XING.红中));
-       // allMajiang.add(new Majiang(PAI_XING.红中));
-       // allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
+        allMajiang.add(new Majiang(PAI_XING.红中));
     }
 
     public static Majiang 发牌() {
@@ -163,7 +163,7 @@ public class MjHelper {
             return true;
         }
         List<Majiang> check = trimList.get(0);
-        if (check.size() == 4) {
+        if (check.size() > 3) {
             if (!处理顺子(trimList)) {
                 return false;
             }

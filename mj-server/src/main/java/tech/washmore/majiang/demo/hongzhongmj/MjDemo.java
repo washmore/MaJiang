@@ -42,6 +42,8 @@ public class MjDemo {
 //        }
 
         int index = 0;
+        long totaltime = 0;
+        long maxtime = 0;
         do {
             List<Majiang> myMajiang = new ArrayList<>();
             MjHelper.开局();
@@ -57,11 +59,17 @@ public class MjDemo {
             long t1 = System.currentTimeMillis();
             List<Majiang> result = MjHelper.验证胡牌(myMajiang);
             long t2 = System.currentTimeMillis();
+            long t = t2 - t1;
+            totaltime += t;
+            if (maxtime < t) {
+                maxtime = t;
+            }
             if (result != null) {
-                System.out.println("\t\t耗時:" + (t2 - t1) + "\t\t是否和牌:" + (result != null) + "\t\t胡牌牌型:" + result.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
+                System.out.println("\t\t耗時:" + t + "\t\t是否和牌:" + (result != null) + "\t\t胡牌牌型:" + result.stream().map(ma -> ma.getPai().name()).collect(Collectors.toList()));
+                System.out.println("总计耗时" + totaltime + "\t\t平均耗时" + totaltime / index + "\t\t最大耗时" + maxtime);
                 break;
             } else {
-                System.out.println("\t\t耗時:" + (t2 - t1) + "\t\t是否和牌:" + (result != null));
+                System.out.println("\t\t耗時:" + t + "\t\t是否和牌:" + (result != null));
             }
         } while (true);
     }
