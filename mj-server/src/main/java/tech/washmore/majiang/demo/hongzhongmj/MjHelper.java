@@ -84,9 +84,9 @@ public class MjHelper {
             }
             list.add(t);
         }
-//        if (hongzhong.size() == 4) {
-//           return majiangZiList;
-//        } else
+        if (hongzhong.size() == 4) {
+           return majiangZiList;
+        } else
         if (hongzhong.size() > 0) {
             List<Majiang> other = majiangZiList.subList(hongzhong.size(), majiangZiList.size());
             List<List<Majiang>> newH = 替换红中赖子(hongzhong.size(), new ArrayList<>());
